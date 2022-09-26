@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: radial-gradient( circle,#eeaeca,#94bbe9);   
+    }
+    .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+    height: 50%;
+    color: #d64484;
+    background-color: rgba(0,0,0, 0.6);
+    }    
+    fieldset{
+        height: 100%;
+ }
+    
+    .inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2px;
+    }
+    .labelinput {
+    position: relative;
+    top: -25px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+    }
+    .inputUser:focus ~ .labelinput,
+    .inputUser:valid ~ .labelinput
+    {
+    top: -50px;
+    font-size:12px;
+    color: rgb(221, 98, 203);
+    }
+    h1{  
+    font-size: 15px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer
+}
+    h1 span{
+    transition: .5s linear
+}
+    h1:hover span:nth-child(1){
+    margin-right: 5px
+
+    
+}
+    h1:hover span:nth-child(2){
+    margin-left: 30px
+}
+    h1:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff, 
+    0 0 40px #fff;
+}
+    #data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+    #submit{
+    background-image: linear-gradient(to right,rgb(0,92, 197),rgb(90,20,220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#submit:hover{
+    background-image: linear-gradient(to right,rgb(0,92, 172),rgb(90,20,195));
+
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+            <fieldset>
+                <h1><span> FORM CLIENT</span></h1>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="none" id="none" class="inputUser" required>
+                    <label for="none" class="labelinput">Name</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="text" class="labelinput">Email</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="phone" name="phone" id="phone" class="inputUser" required>
+                    <label for="phone" class="labelinput">Phone</label>
+                </div>
+            
+                <p>Sexo:</p>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="Female">Female</label>
+                <br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="Male">Male</label>
+                <br>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="Other">Other</label>
+                <br>
+                <div class="inputBox">
+                    <label id="data_nasciento"><b>Birthday</b></label>
+                    <input type="date" name="Birthday" id="data_nascimento">
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelinput">City</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="state" id="state" class="inputUser" required>
+                    <label for="state" class="labelinput">State</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="adress" id="adress" class="inputUser" required>
+                    <label for="adress" class="labelinput">Adress</label>
+                </div> 
+                <br>  
+                <input type="submit" name="submit" id="submit"> 
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+    
+
+</html>
